@@ -72,6 +72,12 @@ TEST_FUNC constexpr void test()
   {
     test_bit_reverse(value);
   }
+
+  for (int bit = 0; bit < digits; ++bit)
+  {
+    test_bit_reverse(static_cast<T>(T{1} << bit));
+    test_bit_reverse(static_cast<T>(all_ones ^ (T{1} << bit)));
+  }
 }
 
 TEST_FUNC constexpr bool test()
