@@ -1,0 +1,2579 @@
+{
+  "repository_name": ".codeboarding-target",
+  "timestamp": "2026-11-09T12:09:56.282488+00:00",
+  "overall_score": 0.9612905213854308,
+  "check_summaries": [
+    {
+      "check_name": "function_size",
+      "description": "Checks that functions/methods do not exceed line count thresholds",
+      "languages": [
+        "cpp"
+      ],
+      "check_type": "standard",
+      "total_entities_checked": 5773,
+      "findings_count": 78,
+      "warning_count": 78,
+      "score": 0.9864888272994977,
+      "finding_groups": [
+        {
+          "severity": "warning",
+          "threshold": 150,
+          "description": "Functions exceeding 150.0 lines",
+          "entities": [
+            {
+              "entity_name": "detail.batched_topk_cluster[c:@N@detail@N@batched_topk_cluster]",
+              "file_path": "cub/cub/agent/agent_batched_topk_cluster.cuh",
+              "line_start": 93,
+              "line_end": 3413,
+              "metric_value": 3320
+            },
+            {
+              "entity_name": "cuda.experimental.places[c:@N@cuda@N@experimental@N@places]",
+              "file_path": "cudax/include/cuda/experimental/__places/cute_partition.cuh",
+              "line_start": 80,
+              "line_end": 2375,
+              "metric_value": 2295
+            },
+            {
+              "entity_name": "libnvcc[c:@N@libnvcc]",
+              "file_path": "c/parallel.v2/src/hostjit/libnvcc/compiler.cpp",
+              "line_start": 73,
+              "line_end": 2331,
+              "metric_value": 2258
+            },
+            {
+              "entity_name": "detail.scan_by_key.policy_selector.get_lookback_policy[c:@N@detail@N@scan_by_key@S@policy_selector@F@get_lookback_policy#I#1]",
+              "file_path": "cub/cub/device/dispatch/tuning/tuning_scan_by_key.cuh",
+              "line_start": 1153,
+              "line_end": 2067,
+              "metric_value": 914
+            },
+            {
+              "entity_name": "detail.reduce_by_key.policy_selector.get_lookback_policy[c:@N@detail@N@reduce_by_key@S@policy_selector@F@get_lookback_policy#I#1]",
+              "file_path": "cub/cub/device/dispatch/tuning/tuning_reduce_by_key.cuh",
+              "line_start": 1077,
+              "line_end": 1787,
+              "metric_value": 710
+            },
+            {
+              "entity_name": "detail.topk[c:@N@detail@N@topk]",
+              "file_path": "cub/cub/agent/agent_topk.cuh",
+              "line_start": 30,
+              "line_end": 739,
+              "metric_value": 709
+            },
+            {
+              "entity_name": "detail.set_ops[c:@N@detail@N@set_ops]",
+              "file_path": "cub/cub/agent/agent_set_operations.cuh",
+              "line_start": 30,
+              "line_end": 703,
+              "metric_value": 673
+            },
+            {
+              "entity_name": "detail.transform[c:@N@detail@N@transform]",
+              "file_path": "cub/cub/device/dispatch/dispatch_transform.cuh",
+              "line_start": 69,
+              "line_end": 648,
+              "metric_value": 579
+            },
+            {
+              "entity_name": "detail.radix_sort[c:@N@detail@N@radix_sort]",
+              "file_path": "cub/cub/agent/agent_radix_sort_downsweep.cuh",
+              "line_start": 126,
+              "line_end": 698,
+              "metric_value": 572
+            },
+            {
+              "entity_name": "detail.scan[c:@N@detail@N@scan]",
+              "file_path": "cub/cub/agent/agent_scan.cuh",
+              "line_start": 124,
+              "line_end": 687,
+              "metric_value": 563
+            },
+            {
+              "entity_name": "detail.radix_sort.policy_selector.operator()[c:@N@detail@N@radix_sort@S@policy_selector@F@operator()#I#1]",
+              "file_path": "cub/cub/device/dispatch/tuning/tuning_radix_sort.cuh",
+              "line_start": 1963,
+              "line_end": 2478,
+              "metric_value": 515
+            },
+            {
+              "entity_name": "detail.batched_topk.make_sm100_pairs_cluster_policy[c:@N@detail@N@batched_topk@F@make_sm100_pairs_cluster_policy#I#I#]",
+              "file_path": "cub/cub/device/dispatch/tuning/tuning_batched_topk.cuh",
+              "line_start": 348,
+              "line_end": 856,
+              "metric_value": 508
+            },
+            {
+              "entity_name": "cuda_cub.core.detail[c:@N@cuda_cub@N@core@N@detail]",
+              "file_path": "thrust/thrust/system/cuda/detail/core/util.h",
+              "line_start": 31,
+              "line_end": 513,
+              "metric_value": 482
+            },
+            {
+              "entity_name": "detail.reduce[c:@N@detail@N@reduce]",
+              "file_path": "cub/cub/agent/agent_reduce.cuh",
+              "line_start": 149,
+              "line_end": 610,
+              "metric_value": 461
+            },
+            {
+              "entity_name": "detail.scan.policy_selector.get_lookback_scan_policy[c:@N@detail@N@scan@S@policy_selector@F@get_lookback_scan_policy#I#1]",
+              "file_path": "cub/cub/device/dispatch/tuning/tuning_scan.cuh",
+              "line_start": 1123,
+              "line_end": 1557,
+              "metric_value": 434
+            },
+            {
+              "entity_name": "detail.transform.transform_kernel_ublkcp[c:@N@detail@N@transform@FT@>8#NI#NI#NI#T#T#T#T#pTtransform_kernel_ublkcp#t0.3#I#t0.4#t0.5#t0.6#P>@N@detail@N@transform@ST>1#T@aligned_base_ptr1t0.7#I#]",
+              "file_path": "cub/cub/device/dispatch/kernels/kernel_transform.cuh",
+              "line_start": 726,
+              "line_end": 1146,
+              "metric_value": 420
+            },
+            {
+              "entity_name": "detail.rle.encode[c:@N@detail@N@rle@N@encode]",
+              "file_path": "cub/cub/device/dispatch/dispatch_rle_encode.cuh",
+              "line_start": 55,
+              "line_end": 472,
+              "metric_value": 417
+            },
+            {
+              "entity_name": "detail.params[c:@N@detail@N@params]",
+              "file_path": "cub/cub/detail/segmented_params.cuh",
+              "line_start": 36,
+              "line_end": 448,
+              "metric_value": 412
+            },
+            {
+              "entity_name": "detail.select.policy_selector.get_sm100_tuning[c:@N@detail@N@select@S@policy_selector@F@get_sm100_tuning#b#b#b#1]",
+              "file_path": "cub/cub/device/dispatch/tuning/tuning_select_if.cuh",
+              "line_start": 2258,
+              "line_end": 2670,
+              "metric_value": 412
+            },
+            {
+              "entity_name": "detail.batched_topk.make_sm103_pairs_cluster_policy[c:@N@detail@N@batched_topk@F@make_sm103_pairs_cluster_policy#I#I#]",
+              "file_path": "cub/cub/device/dispatch/tuning/tuning_batched_topk.cuh",
+              "line_start": 1159,
+              "line_end": 1550,
+              "metric_value": 391
+            },
+            {
+              "entity_name": "libnvcc.CompilerImpl.compileDeviceToPTX[c:@N@libnvcc@S@CompilerImpl@F@compileDeviceToPTX#&1I#S0_#S0_#&1$@N@libnvcc@S@CompilerOptions#&I#]",
+              "file_path": "c/parallel.v2/src/hostjit/libnvcc/compiler.cpp",
+              "line_start": 941,
+              "line_end": 1324,
+              "metric_value": 383
+            },
+            {
+              "entity_name": "detail.batched_topk[c:@N@detail@N@batched_topk]",
+              "file_path": "cub/cub/agent/agent_batched_topk.cuh",
+              "line_start": 33,
+              "line_end": 388,
+              "metric_value": 355
+            },
+            {
+              "entity_name": "cccl_device_segmented_sort_compile[c:@F@cccl_device_segmented_sort_compile#*I#I#I#I#I#I#I#I#*1C#S1_#S1_#S1_#*1I#]",
+              "file_path": "c/parallel/src/segmented_sort.cu",
+              "line_start": 402,
+              "line_end": 740,
+              "metric_value": 338
+            },
+            {
+              "entity_name": "detail.batched_topk.make_sm103_keys_cluster_policy[c:@N@detail@N@batched_topk@F@make_sm103_keys_cluster_policy#I#I#]",
+              "file_path": "cub/cub/device/dispatch/tuning/tuning_batched_topk.cuh",
+              "line_start": 1578,
+              "line_end": 1897,
+              "metric_value": 319
+            },
+            {
+              "entity_name": "clang.tidy.cccl.(anonymous)[c:@N@clang@N@tidy@N@cccl@aN]",
+              "file_path": "cmake/clang_tidy_plugins/modernize_type_traits/modernize_type_traits.cpp",
+              "line_start": 38,
+              "line_end": 347,
+              "metric_value": 309
+            },
+            {
+              "entity_name": "detail.three_way_partition.policy_selector.get_lookback_policy[c:@N@detail@N@three_way_partition@S@policy_selector@F@get_lookback_policy#I#1]",
+              "file_path": "cub/cub/device/dispatch/tuning/tuning_three_way_partition.cuh",
+              "line_start": 519,
+              "line_end": 821,
+              "metric_value": 302
+            },
+            {
+              "entity_name": "detail.segmented_sort[c:@N@detail@N@segmented_sort]",
+              "file_path": "cub/cub/device/dispatch/dispatch_segmented_sort.cuh",
+              "line_start": 57,
+              "line_end": 352,
+              "metric_value": 295
+            },
+            {
+              "entity_name": "cuda.experimental.stf.logical_data_untyped.reconstruct_after_redux[c:@N@cuda@N@experimental@N@stf@S@logical_data_untyped@F@reconstruct_after_redux#&I#I#&1I#S0_#]",
+              "file_path": "cudax/include/cuda/experimental/__stf/internal/logical_data.cuh",
+              "line_start": 1368,
+              "line_end": 1645,
+              "metric_value": 277
+            },
+            {
+              "entity_name": "cccl_device_unique_by_key_compile[c:@F@cccl_device_unique_by_key_compile#*I#I#I#I#I#I#I#I#I#*1C#S1_#S1_#S1_#*1I#]",
+              "file_path": "c/parallel/src/unique_by_key.cu",
+              "line_start": 164,
+              "line_end": 426,
+              "metric_value": 262
+            },
+            {
+              "entity_name": "libnvcc.CompilerImpl.compileToObject[c:@N@libnvcc@S@CompilerImpl@F@compileToObject#&1I#S0_#S0_#S0_#&1$@N@libnvcc@S@CompilerOptions#]",
+              "file_path": "c/parallel.v2/src/hostjit/libnvcc/compiler.cpp",
+              "line_start": 1683,
+              "line_end": 1940,
+              "metric_value": 257
+            },
+            {
+              "entity_name": "cccl_device_radix_sort_compile[c:@F@cccl_device_radix_sort_compile#*I#I#I#I#I#*1C#I#I#S1_#S1_#S1_#S1_#*1I#]",
+              "file_path": "c/parallel/src/radix_sort.cu",
+              "line_start": 221,
+              "line_end": 472,
+              "metric_value": 251
+            },
+            {
+              "entity_name": "cuda.experimental[c:@N@cuda@N@experimental]",
+              "file_path": "cudax/include/cuda/experimental/__container/uninitialized_buffer.cuh",
+              "line_start": 38,
+              "line_end": 288,
+              "metric_value": 250
+            },
+            {
+              "entity_name": "detail.batched_topk.make_sm100_keys_cluster_policy[c:@N@detail@N@batched_topk@F@make_sm100_keys_cluster_policy#I#I#]",
+              "file_path": "cub/cub/device/dispatch/tuning/tuning_batched_topk.cuh",
+              "line_start": 891,
+              "line_end": 1139,
+              "metric_value": 248
+            },
+            {
+              "entity_name": "cccl_device_scan_compile[c:@F@cccl_device_scan_compile#*I#I#I#I#I#b#I#I#I#*1C#S1_#S1_#S1_#*1I#]",
+              "file_path": "c/parallel/src/scan.cu",
+              "line_start": 327,
+              "line_end": 574,
+              "metric_value": 247
+            },
+            {
+              "entity_name": "detail.rle.non_trivial_runs.policy_selector.get_lookback_policy[c:@N@detail@N@rle@N@non_trivial_runs@S@policy_selector@F@get_lookback_policy#I#1]",
+              "file_path": "cub/cub/device/dispatch/tuning/tuning_rle_non_trivial_runs.cuh",
+              "line_start": 464,
+              "line_end": 709,
+              "metric_value": 245
+            },
+            {
+              "entity_name": "__detail.__segmented_reduce[c:@N@__detail@N@__segmented_reduce]",
+              "file_path": "cudax/include/cuda/experimental/mgmn/__algorithm/reduce/segmented_reduce.h",
+              "line_start": 61,
+              "line_end": 300,
+              "metric_value": 239
+            },
+            {
+              "entity_name": "libnvcc.CompilerImpl.linkToSharedLibrary[c:@N@libnvcc@S@CompilerImpl@F@linkToSharedLibrary#&1I#S0_#&1$@N@libnvcc@S@CompilerOptions#]",
+              "file_path": "c/parallel.v2/src/hostjit/libnvcc/compiler.cpp",
+              "line_start": 2092,
+              "line_end": 2329,
+              "metric_value": 237
+            },
+            {
+              "entity_name": "hostjit[c:@N@hostjit]",
+              "file_path": "c/parallel.v2/src/hostjit/codegen/bitcode.cpp",
+              "line_start": 21,
+              "line_end": 256,
+              "metric_value": 235
+            },
+            {
+              "entity_name": "__nth_element[c:@FT@>3#T#T#T__nth_element#t0.2#S0_#S0_#t0.1#I#]",
+              "file_path": "libcudacxx/include/cuda/std/__algorithm/nth_element.h",
+              "line_start": 54,
+              "line_end": 277,
+              "metric_value": 223
+            },
+            {
+              "entity_name": "cccl_device_reduce_compile[c:@F@cccl_device_reduce_compile#*I#I#I#I#I#I#I#I#I#*1C#S1_#S1_#S1_#*1I#]",
+              "file_path": "c/parallel/src/reduce.cu",
+              "line_start": 172,
+              "line_end": 392,
+              "metric_value": 220
+            },
+            {
+              "entity_name": "detail.segmented_radix_sort.policy_selector.operator()[c:@N@detail@N@segmented_radix_sort@S@policy_selector@F@operator()#I#1]",
+              "file_path": "cub/cub/device/dispatch/tuning/tuning_segmented_radix_sort.cuh",
+              "line_start": 74,
+              "line_end": 292,
+              "metric_value": 218
+            },
+            {
+              "entity_name": "cccl_device_three_way_partition_compile[c:@F@cccl_device_three_way_partition_compile#*I#I#I#I#I#I#I#I#I#I#*1C#S1_#S1_#S1_#*1I#]",
+              "file_path": "c/parallel/src/three_way_partition.cu",
+              "line_start": 126,
+              "line_end": 343,
+              "metric_value": 217
+            },
+            {
+              "entity_name": "cuda.experimental.stf.reserved.host_launch_scope.operator->*[c:@N@cuda@N@experimental@N@stf@N@reserved@ST>3#T#Nb#pT@host_launch_scope@FT@>1#Toperator->*#&&t1.0#v#]",
+              "file_path": "cudax/include/cuda/experimental/__stf/internal/host_launch_scope.cuh",
+              "line_start": 204,
+              "line_end": 421,
+              "metric_value": 217
+            },
+            {
+              "entity_name": "detail.select.policy_selector.get_sm80_tuning[c:@N@detail@N@select@S@policy_selector@F@get_sm80_tuning#b#b#1]",
+              "file_path": "cub/cub/device/dispatch/tuning/tuning_select_if.cuh",
+              "line_start": 1823,
+              "line_end": 2038,
+              "metric_value": 215
+            },
+            {
+              "entity_name": "detail.select.policy_selector.get_sm90_tuning[c:@N@detail@N@select@S@policy_selector@F@get_sm90_tuning#b#b#1]",
+              "file_path": "cub/cub/device/dispatch/tuning/tuning_select_if.cuh",
+              "line_start": 2040,
+              "line_end": 2255,
+              "metric_value": 215
+            },
+            {
+              "entity_name": "detail.unique_by_key.policy_selector.get_sm90_tuning[c:@N@detail@N@unique_by_key@S@policy_selector@F@get_sm90_tuning#1]",
+              "file_path": "cub/cub/device/dispatch/tuning/tuning_unique_by_key.cuh",
+              "line_start": 1055,
+              "line_end": 1265,
+              "metric_value": 210
+            },
+            {
+              "entity_name": "libnvcc.parseOptions[c:compiler.cpp@N@libnvcc@F@parseOptions#I#*1*1C#&$@N@libnvcc@S@CompilerOptions#&I#]",
+              "file_path": "c/parallel.v2/src/hostjit/libnvcc/compiler.cpp",
+              "line_start": 356,
+              "line_end": 565,
+              "metric_value": 209
+            },
+            {
+              "entity_name": "cccl_device_merge_sort_compile[c:@F@cccl_device_merge_sort_compile#*I#I#I#I#I#I#I#I#*1C#S1_#S1_#S1_#*1I#]",
+              "file_path": "c/parallel/src/merge_sort.cu",
+              "line_start": 196,
+              "line_end": 404,
+              "metric_value": 208
+            },
+            {
+              "entity_name": "detail.radix_sort.get_sm100_tuning[c:@N@detail@N@radix_sort@F@get_sm100_tuning#I#I#I#I#]",
+              "file_path": "cub/cub/device/dispatch/tuning/tuning_radix_sort.cuh",
+              "line_start": 640,
+              "line_end": 847,
+              "metric_value": 207
+            },
+            {
+              "entity_name": "cuda_cub[c:@N@cuda_cub]",
+              "file_path": "thrust/thrust/system/cuda/detail/copy.h",
+              "line_start": 36,
+              "line_end": 240,
+              "metric_value": 204
+            },
+            {
+              "entity_name": "cccl_device_histogram_compile[c:@F@cccl_device_histogram_compile#*I#I#I#I#I#I#I#I#I#b#I#I#*1C#S1_#S1_#S1_#*1I#]",
+              "file_path": "c/parallel/src/histogram.cu",
+              "line_start": 234,
+              "line_end": 437,
+              "metric_value": 203
+            },
+            {
+              "entity_name": "cccl_device_segmented_reduce_compile[c:@F@cccl_device_segmented_reduce_compile#*I#I#I#I#I#I#I#I#I#*1C#S1_#S1_#S1_#*1I#]",
+              "file_path": "c/parallel/src/segmented_reduce.cu",
+              "line_start": 123,
+              "line_end": 322,
+              "metric_value": 199
+            },
+            {
+              "entity_name": "detail.merge_sort.dispatch[c:@N@detail@N@merge_sort@F@dispatch#*v#&I#I#I#I#I#I#I#I#I#I#I#*I#S2_#]",
+              "file_path": "cub/cub/device/dispatch/dispatch_merge_sort.cuh",
+              "line_start": 475,
+              "line_end": 674,
+              "metric_value": 199
+            },
+            {
+              "entity_name": "cuda.experimental.stf.reserved.logical_data_untyped_impl.enforce_msi_protocol[c:@N@cuda@N@experimental@N@stf@N@reserved@S@logical_data_untyped_impl@F@enforce_msi_protocol#I#I#&I#]",
+              "file_path": "cudax/include/cuda/experimental/__stf/internal/logical_data.cuh",
+              "line_start": 735,
+              "line_end": 930,
+              "metric_value": 195
+            },
+            {
+              "entity_name": "detail.unique_by_key.policy_selector.get_sm80_tuning[c:@N@detail@N@unique_by_key@S@policy_selector@F@get_sm80_tuning#1]",
+              "file_path": "cub/cub/device/dispatch/tuning/tuning_unique_by_key.cuh",
+              "line_start": 1267,
+              "line_end": 1461,
+              "metric_value": 194
+            },
+            {
+              "entity_name": "__internal_fpmp2_erf[c:@F@__internal_fpmp2_erf#f#f#*f#S0_#]",
+              "file_path": "libcudacxx/include/cuda/__fp/fpmp_math_impl_special.h",
+              "line_start": 138,
+              "line_end": 330,
+              "metric_value": 192
+            },
+            {
+              "entity_name": "cuda_cub.detail[c:@N@cuda_cub@N@detail]",
+              "file_path": "thrust/thrust/system/cuda/detail/core/triple_chevron_launch.h",
+              "line_start": 22,
+              "line_end": 213,
+              "metric_value": 191
+            },
+            {
+              "entity_name": "cuda.experimental.stf.reserved[c:@N@cuda@N@experimental@N@stf@N@reserved]",
+              "file_path": "cudax/include/cuda/experimental/__stf/allocators/buddy_allocator.cuh",
+              "line_start": 37,
+              "line_end": 227,
+              "metric_value": 190
+            },
+            {
+              "entity_name": "cccl_device_binary_transform_compile[c:@F@cccl_device_binary_transform_compile#*I#I#I#I#I#I#I#*1C#S1_#S1_#S1_#*1I#]",
+              "file_path": "c/parallel/src/transform.cu",
+              "line_start": 501,
+              "line_end": 690,
+              "metric_value": 189
+            },
+            {
+              "entity_name": "libnvcc.CompilerImpl.compileToDeviceBitcode[c:@N@libnvcc@S@CompilerImpl@F@compileToDeviceBitcode#&1I#S0_#S0_#&1$@N@libnvcc@S@CompilerOptions#]",
+              "file_path": "c/parallel.v2/src/hostjit/libnvcc/compiler.cpp",
+              "line_start": 1326,
+              "line_end": 1509,
+              "metric_value": 183
+            },
+            {
+              "entity_name": "cccl_device_binary_search_compile[c:@F@cccl_device_binary_search_compile#*I#I#I#I#I#I#I#I#*1C#S1_#S1_#S1_#*1I#]",
+              "file_path": "c/parallel/src/binary_search.cu",
+              "line_start": 122,
+              "line_end": 301,
+              "metric_value": 179
+            },
+            {
+              "entity_name": "mr.unsynchronized_pool_resource.do_allocate[c:@N@mr@ST>1#T@unsynchronized_pool_resource@F@do_allocate#I#I#]",
+              "file_path": "thrust/thrust/mr/pool.h",
+              "line_start": 249,
+              "line_end": 428,
+              "metric_value": 179
+            },
+            {
+              "entity_name": "cuda.experimental.stf.stackable_ctx.impl.graph_ctx_node.graph_ctx_node[c:@N@cuda@N@experimental@N@stf@S@stackable_ctx@S@impl@S@graph_ctx_node@F@graph_ctx_node#*$@N@cuda@N@experimental@N@stf@S@stackable_ctx@S@impl@S@ctx_node_base#I#&1I#S2_#]",
+              "file_path": "cudax/include/cuda/experimental/__stf/stackable/stackable_ctx_impl.cuh",
+              "line_start": 440,
+              "line_end": 617,
+              "metric_value": 177
+            },
+            {
+              "entity_name": "(anonymous)[c:@aN]",
+              "file_path": "c/experimental/stf/src/stf.cu",
+              "line_start": 40,
+              "line_end": 216,
+              "metric_value": 176
+            },
+            {
+              "entity_name": "cccl_device_unary_transform_compile[c:@F@cccl_device_unary_transform_compile#*I#I#I#I#I#I#*1C#S1_#S1_#S1_#*1I#]",
+              "file_path": "c/parallel/src/transform.cu",
+              "line_start": 218,
+              "line_end": 394,
+              "metric_value": 176
+            },
+            {
+              "entity_name": "detail.find[c:@N@detail@N@find]",
+              "file_path": "cub/cub/agent/agent_find.cuh",
+              "line_start": 25,
+              "line_end": 200,
+              "metric_value": 175
+            },
+            {
+              "entity_name": "libnvcc.CompilerImpl.compileHostCode[c:@N@libnvcc@S@CompilerImpl@F@compileHostCode#&1I#S0_#S0_#S0_#&1$@N@libnvcc@S@CompilerOptions#&I#]",
+              "file_path": "c/parallel.v2/src/hostjit/libnvcc/compiler.cpp",
+              "line_start": 1511,
+              "line_end": 1681,
+              "metric_value": 170
+            },
+            {
+              "entity_name": "detail.reduce.DeterministicDeviceReduceKernel[c:@N@detail@N@reduce@F@DeterministicDeviceReduceKernel#I#*I#I#I#I#I#]",
+              "file_path": "cub/cub/device/dispatch/kernels/kernel_reduce_deterministic.cuh",
+              "line_start": 117,
+              "line_end": 286,
+              "metric_value": 169
+            },
+            {
+              "entity_name": "__internal_fpmp2_trig_reduction[c:@FT@>1#T__internal_fpmp2_trig_reduction#t0.0#S0_#*I#*S0_#S2_#I#]",
+              "file_path": "libcudacxx/include/cuda/__fp/fpmp_math_impl_trig.h",
+              "line_start": 243,
+              "line_end": 409,
+              "metric_value": 166
+            },
+            {
+              "entity_name": "cuda.experimental.stf.reclaim_memory[c:@N@cuda@N@experimental@N@stf@F@reclaim_memory#&I#&1I#I#S0_#S0_#]",
+              "file_path": "cudax/include/cuda/experimental/__stf/internal/logical_data.cuh",
+              "line_start": 2503,
+              "line_end": 2665,
+              "metric_value": 162
+            },
+            {
+              "entity_name": "detail.unique_by_key.policy_selector.get_sm100_tuning[c:@N@detail@N@unique_by_key@S@policy_selector@F@get_sm100_tuning#1]",
+              "file_path": "cub/cub/device/dispatch/tuning/tuning_unique_by_key.cuh",
+              "line_start": 894,
+              "line_end": 1053,
+              "metric_value": 159
+            },
+            {
+              "entity_name": "detail.segmented_reduce.DeviceFixedSizeSegmentedReduceKernel[c:@N@detail@N@segmented_reduce@F@DeviceFixedSizeSegmentedReduceKernel#I#I#I#I#I#I#*I#I#I#]",
+              "file_path": "cub/cub/device/dispatch/kernels/kernel_segmented_reduce.cuh",
+              "line_start": 319,
+              "line_end": 477,
+              "metric_value": 158
+            },
+            {
+              "entity_name": "cuda.experimental.stf.reserved.logical_data_untyped_impl.erase[c:@N@cuda@N@experimental@N@stf@N@reserved@S@logical_data_untyped_impl@F@erase#]",
+              "file_path": "cudax/include/cuda/experimental/__stf/internal/logical_data.cuh",
+              "line_start": 1724,
+              "line_end": 1880,
+              "metric_value": 156
+            },
+            {
+              "entity_name": "detail.rle.encode.policy_selector.get_lookback_policy[c:@N@detail@N@rle@N@encode@S@policy_selector@F@get_lookback_policy#I#1]",
+              "file_path": "cub/cub/device/dispatch/tuning/tuning_rle_encode.cuh",
+              "line_start": 581,
+              "line_end": 736,
+              "metric_value": 155
+            },
+            {
+              "entity_name": "cuda.experimental.stf.reserved.enforce_stf_deps_before[c:@N@cuda@N@experimental@N@stf@N@reserved@FT@>1#Tenforce_stf_deps_before#&I#&$@N@cuda@N@experimental@N@stf@S@logical_data_untyped#I#&1t0.0#I#I#I#]",
+              "file_path": "cudax/include/cuda/experimental/__stf/internal/logical_data.cuh",
+              "line_start": 1892,
+              "line_end": 2045,
+              "metric_value": 153
+            },
+            {
+              "entity_name": "detail.batched_topk.select_cluster_launch_shape[c:@N@detail@N@batched_topk@FT@>2#T#Tselect_cluster_launch_shape#I#I#I#I#I#t0.1#I#]",
+              "file_path": "cub/cub/device/dispatch/dispatch_batched_topk.cuh",
+              "line_start": 330,
+              "line_end": 481,
+              "metric_value": 151
+            },
+            {
+              "entity_name": "FormatLoad[c:@F@FormatLoad#&I#]",
+              "file_path": "libcudacxx/codegen/generators/ld_st.h",
+              "line_start": 39,
+              "line_end": 190,
+              "metric_value": 151
+            },
+            {
+              "entity_name": "cuda.experimental.cuco.__hyperloglog_ns[c:@N@cuda@N@experimental@N@cuco@N@__hyperloglog_ns]",
+              "file_path": "cudax/include/cuda/experimental/__cuco/detail/hyperloglog/finalizer.cuh",
+              "line_start": 35,
+              "line_end": 185,
+              "metric_value": 150
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "check_name": "circular_dependencies",
+      "description": "Detects circular dependencies between packages",
+      "languages": [
+        "cpp"
+      ],
+      "check_type": "circular_dependencies",
+      "cycles": [
+        "cub.cub.thread -> cub.cub.device.dispatch.kernels -> cub.cub -> c.parallel.src -> c.parallel.src.jit_templates -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> cub.cub.thread",
+        "cub.cub.thread -> cub.cub.device.dispatch.kernels -> cub.cub -> c.parallel.src -> c.parallel.src.jit_templates -> cudax.include.cuda.experimental.__stf.utility -> cudax.include.cuda.experimental.__places -> cub.cub.agent -> cub.cub.thread",
+        "cub.cub.thread -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> cub.cub.thread",
+        "cub.cub.thread -> cudax.include.cuda.experimental.__stf.utility -> cudax.include.cuda.experimental.__places -> cub.cub.agent -> cub.cub.thread",
+        "c.parallel.src.jit_templates -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> c.parallel.src -> c.parallel.src.jit_templates",
+        "c.parallel.src.jit_templates -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> cub.cub -> c.parallel.src -> c.parallel.src.jit_templates",
+        "c.parallel.src.jit_templates -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> cub.cub.device.dispatch -> c.parallel.src -> c.parallel.src.jit_templates",
+        "c.parallel.src.jit_templates -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> cub.cub.device.dispatch -> cub.cub -> c.parallel.src -> c.parallel.src.jit_templates",
+        "c.parallel.src.jit_templates -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> cub.cub.device.dispatch -> cudax.include.cuda.experimental.__places -> cub.cub.device.dispatch.kernels -> cub.cub -> c.parallel.src -> c.parallel.src.jit_templates",
+        "c.parallel.src.jit_templates -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> cub.cub.device.dispatch -> cudax.include.cuda.experimental.__stf.internal -> cudax.include.cuda.experimental.__places -> cub.cub.device.dispatch.kernels -> cub.cub -> c.parallel.src -> c.parallel.src.jit_templates",
+        "c.parallel.src.jit_templates -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> cub.cub.device.dispatch -> cudax.include.cuda.experimental.__stf.internal -> cudax.include.cuda.experimental.__stf.stackable -> cudax.include.cuda.experimental.__places -> cub.cub.device.dispatch.kernels -> cub.cub -> c.parallel.src -> c.parallel.src.jit_templates",
+        "c.parallel.src.jit_templates -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> cub.cub.device.dispatch.kernels -> cub.cub -> c.parallel.src -> c.parallel.src.jit_templates",
+        "c.parallel.src.jit_templates -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__places -> cub.cub.device.dispatch.kernels -> cub.cub -> c.parallel.src -> c.parallel.src.jit_templates",
+        "c.parallel.src.jit_templates -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__stf.allocators -> cudax.include.cuda.experimental.__places -> cub.cub.device.dispatch.kernels -> cub.cub -> c.parallel.src -> c.parallel.src.jit_templates",
+        "c.parallel.src.jit_templates -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__stf.stackable -> cudax.include.cuda.experimental.__places -> cub.cub.device.dispatch.kernels -> cub.cub -> c.parallel.src -> c.parallel.src.jit_templates",
+        "c.parallel.src.jit_templates -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__stf.stackable -> cudax.include.cuda.experimental.__stf.internal -> cudax.include.cuda.experimental.__places -> cub.cub.device.dispatch.kernels -> cub.cub -> c.parallel.src -> c.parallel.src.jit_templates",
+        "c.parallel.src.jit_templates -> cudax.include.cuda.experimental.__stf.utility -> cudax.include.cuda.experimental.__places -> cub.cub.agent -> c.parallel.src -> c.parallel.src.jit_templates",
+        "c.parallel.src.jit_templates -> cudax.include.cuda.experimental.__stf.utility -> cudax.include.cuda.experimental.__places -> cub.cub.agent -> cub.cub -> c.parallel.src -> c.parallel.src.jit_templates",
+        "c.parallel.src.jit_templates -> cudax.include.cuda.experimental.__stf.utility -> cudax.include.cuda.experimental.__places -> cub.cub.agent -> cub.cub.device.dispatch -> c.parallel.src -> c.parallel.src.jit_templates",
+        "c.parallel.src.jit_templates -> cudax.include.cuda.experimental.__stf.utility -> cudax.include.cuda.experimental.__places -> cub.cub.agent -> cub.cub.device.dispatch -> cub.cub -> c.parallel.src -> c.parallel.src.jit_templates",
+        "c.parallel.src.jit_templates -> cudax.include.cuda.experimental.__stf.utility -> cudax.include.cuda.experimental.__places -> cub.cub.agent -> cub.cub.device.dispatch.kernels -> cub.cub -> c.parallel.src -> c.parallel.src.jit_templates",
+        "c.parallel.src.jit_templates -> cudax.include.cuda.experimental.__stf.utility -> cudax.include.cuda.experimental.__places -> cub.cub.device.dispatch.kernels -> cub.cub -> c.parallel.src -> c.parallel.src.jit_templates",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__places -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__places -> cub.cub.device.dispatch.tuning -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__graph -> cudax.include.cuda.experimental.__stf.stackable -> cudax.include.cuda.experimental.__stf.internal -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__graph -> cudax.include.cuda.experimental.__stf.stackable -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__graph -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__places.exec -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__stf.allocators -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__stf.graph -> cudax.include.cuda.experimental.__stf.internal -> cudax.include.cuda.experimental.__stf.stackable -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__stf.graph -> cudax.include.cuda.experimental.__stf.internal -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__stf.graph -> cudax.include.cuda.experimental.__stf.stackable -> cudax.include.cuda.experimental.__stf.internal -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__stf.graph -> cudax.include.cuda.experimental.__stf.stackable -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__stf.graph -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__stf.internal -> cudax.include.cuda.experimental.__stf.stackable -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__stf.internal -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__stf.stackable -> cudax.include.cuda.experimental.__stf.internal -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__stf.stackable -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__places -> libcudacxx.include.cuda.__barrier -> cub.cub.device.dispatch.tuning -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__places -> libcudacxx.include.cuda.__barrier -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__stf.allocators -> cudax.include.cuda.experimental.__places -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__stf.allocators -> cudax.include.cuda.experimental.__places -> cub.cub.device.dispatch.tuning -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__stf.allocators -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__graph -> cudax.include.cuda.experimental.__stf.stackable -> cudax.include.cuda.experimental.__stf.internal -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__stf.allocators -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__graph -> cudax.include.cuda.experimental.__stf.stackable -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__stf.allocators -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__graph -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__stf.allocators -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__places.exec -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__stf.allocators -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__stf.graph -> cudax.include.cuda.experimental.__stf.internal -> cudax.include.cuda.experimental.__stf.stackable -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__stf.allocators -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__stf.graph -> cudax.include.cuda.experimental.__stf.internal -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail",
+        "thrust.thrust.system.cuda.detail -> cudax.include.cuda.experimental.__stf.allocators -> cudax.include.cuda.experimental.__places -> cudax.include.cuda.experimental.__stf.graph -> cudax.include.cuda.experimental.__stf.stackable -> cudax.include.cuda.experimental.__stf.internal -> cudax.include.cuda.experimental.__stf.utility -> cub.cub.agent -> thrust.thrust.detail.allocator -> thrust.thrust.system.cuda.detail"
+      ],
+      "packages_checked": 237,
+      "packages_in_cycles": 19
+    },
+    {
+      "check_name": "unused_code_diagnostics",
+      "description": "Detects unused imports, variables, functions, and dead code via LSP diagnostics",
+      "languages": [
+        "cpp"
+      ],
+      "check_type": "standard",
+      "total_entities_checked": 92,
+      "findings_count": 92,
+      "warning_count": 63,
+      "score": 0.0,
+      "finding_groups": [
+        {
+          "severity": "warning",
+          "threshold": 0,
+          "description": "Variables declared but never used",
+          "entities": [
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "c/experimental/stf/src/stf.cu",
+              "line_start": 14,
+              "line_end": 14,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "c/parallel/src/binary_search.cu",
+              "line_start": 13,
+              "line_end": 13,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header nvjitlink.h is not used directly (fix available)",
+              "file_path": "c/parallel/src/for.cu",
+              "line_start": 20,
+              "line_end": 20,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header iterators.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/histogram.cu",
+              "line_start": 25,
+              "line_end": 25,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header nvjitlink.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/histogram.cu",
+              "line_start": 29,
+              "line_end": 29,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header input_iterator.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/jit_templates/jit_entry.h",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header operation.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/jit_templates/jit_entry.h",
+              "line_start": 2,
+              "line_end": 2,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header output_iterator.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/jit_templates/jit_entry.h",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header traits.h is not used directly (fix available)",
+              "file_path": "c/parallel/src/jit_templates/mappings/iterator.h",
+              "line_start": 14,
+              "line_end": 14,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header traits.h is not used directly (fix available)",
+              "file_path": "c/parallel/src/jit_templates/mappings/operation.h",
+              "line_start": 17,
+              "line_end": 17,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header traits.h is not used directly (fix available)",
+              "file_path": "c/parallel/src/jit_templates/mappings/type_info.h",
+              "line_start": 20,
+              "line_end": 20,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header traits.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/jit_templates/templates/input_iterator.h",
+              "line_start": 20,
+              "line_end": 20,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header iterator.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/jit_templates/templates/input_iterator.h",
+              "line_start": 24,
+              "line_end": 24,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header operation.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/jit_templates/templates/operation.h",
+              "line_start": 28,
+              "line_end": 28,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header type_info.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/jit_templates/templates/operation.h",
+              "line_start": 29,
+              "line_end": 29,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header traits.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/jit_templates/templates/output_iterator.h",
+              "line_start": 20,
+              "line_end": 20,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header iterator.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/jit_templates/templates/output_iterator.h",
+              "line_start": 24,
+              "line_end": 24,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header type_info.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/jit_templates/templates/output_iterator.h",
+              "line_start": 25,
+              "line_end": 25,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header errors.h is not used directly (fix available)",
+              "file_path": "c/parallel/src/jit_templates/traits.h",
+              "line_start": 18,
+              "line_end": 18,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header iterators.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/merge_sort.cu",
+              "line_start": 26,
+              "line_end": 26,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header operators.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/merge_sort.cu",
+              "line_start": 27,
+              "line_end": 27,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header indirect_arg.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/merge_sort.cu",
+              "line_start": 30,
+              "line_end": 30,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header nvjitlink.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/merge_sort.cu",
+              "line_start": 31,
+              "line_end": 31,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header tuning.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/merge_sort.cu",
+              "line_start": 33,
+              "line_end": 33,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "c/parallel/src/nvrtc/command_list.h",
+              "line_start": 13,
+              "line_end": 13,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header command_list.h is not used directly (fix available)",
+              "file_path": "c/parallel/src/nvrtc/ltoir_list_appender.h",
+              "line_start": 15,
+              "line_end": 15,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header operators.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/radix_sort.cu",
+              "line_start": 25,
+              "line_end": 25,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header nvjitlink.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/radix_sort.cu",
+              "line_start": 29,
+              "line_end": 29,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header nvjitlink.h is not used directly (fix available)",
+              "file_path": "c/parallel/src/reduce.cu",
+              "line_start": 38,
+              "line_end": 38,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header nvjitlink.h is not used directly (fix available)",
+              "file_path": "c/parallel/src/scan.cu",
+              "line_start": 36,
+              "line_end": 36,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header nvjitlink.h is not used directly (fix available)",
+              "file_path": "c/parallel/src/segmented_reduce.cu",
+              "line_start": 34,
+              "line_end": 34,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header output_iterator.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/segmented_sort.cu",
+              "line_start": 35,
+              "line_end": 35,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header nvjitlink.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/segmented_sort.cu",
+              "line_start": 40,
+              "line_end": 40,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header indirect_arg.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/three_way_partition.cu",
+              "line_start": 36,
+              "line_end": 36,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header nvjitlink.h is not used directly (fixes available)",
+              "file_path": "c/parallel/src/three_way_partition.cu",
+              "line_start": 37,
+              "line_end": 37,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header nvjitlink.h is not used directly (fix available)",
+              "file_path": "c/parallel/src/transform.cu",
+              "line_start": 38,
+              "line_end": 38,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header nvjitlink.h is not used directly (fix available)",
+              "file_path": "c/parallel/src/unique_by_key.cu",
+              "line_start": 25,
+              "line_end": 25,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header scan_tile_state.h is not used directly (fix available)",
+              "file_path": "c/parallel/src/util/scan_tile_state.cu",
+              "line_start": 23,
+              "line_end": 23,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "c/parallel/src/util/serialization.h",
+              "line_start": 13,
+              "line_end": 13,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "c/parallel/src/util/tuning.cpp",
+              "line_start": 13,
+              "line_end": 13,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "c/parallel.v2/src/hostjit/codegen/iterators.cpp",
+              "line_start": 11,
+              "line_end": 11,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header __clang_cuda_libdevice_declares.h is not used directly (fixes available)",
+              "file_path": "c/parallel.v2/src/hostjit/include/hostjit/cuda_minimal/__clang_cuda_runtime_wrapper.h",
+              "line_start": 72,
+              "line_end": 72,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header __clang_cuda_device_functions.h is not used directly (fixes available)",
+              "file_path": "c/parallel.v2/src/hostjit/include/hostjit/cuda_minimal/__clang_cuda_runtime_wrapper.h",
+              "line_start": 73,
+              "line_end": 73,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header __clang_cuda_math.h is not used directly (fixes available)",
+              "file_path": "c/parallel.v2/src/hostjit/include/hostjit/cuda_minimal/__clang_cuda_runtime_wrapper.h",
+              "line_start": 75,
+              "line_end": 75,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "cmake/clang_tidy_plugins/modernize_type_traits/generate_trait_catalog.cpp",
+              "line_start": 4,
+              "line_end": 4,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "cmake/clang_tidy_plugins/prefer_cuda_traits/prefer_cuda_traits.cpp",
+              "line_start": 23,
+              "line_end": 23,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "cmake/clang_tidy_plugins/simplify_type_traits/simplify_type_traits.cpp",
+              "line_start": 10,
+              "line_end": 10,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "cudax/include/cuda/experimental/__places/cute_partition.cuh",
+              "line_start": 75,
+              "line_end": 75,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "cudax/include/cuda/experimental/__places/exec/locality_domain.cuh",
+              "line_start": 107,
+              "line_end": 107,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "cudax/include/cuda/experimental/__stf/internal/acquire_release.cuh",
+              "line_start": 34,
+              "line_end": 34,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "cudax/include/cuda/experimental/__stf/internal/async_prereq.cuh",
+              "line_start": 39,
+              "line_end": 39,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "cudax/include/cuda/experimental/__stf/internal/dot.cuh",
+              "line_start": 54,
+              "line_end": 54,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "cudax/include/cuda/experimental/__stf/internal/reducer.cuh",
+              "line_start": 33,
+              "line_end": 33,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "cudax/include/cuda/experimental/__stf/internal/reorderer.cuh",
+              "line_start": 35,
+              "line_end": 35,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header cmath is not used directly (fix available)",
+              "file_path": "cudax/include/cuda/experimental/__stf/internal/task_statistics.cuh",
+              "line_start": 43,
+              "line_end": 43,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "cudax/include/cuda/experimental/__stf/stackable/stackable_ctx.cuh",
+              "line_start": 32,
+              "line_end": 32,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "cudax/include/cuda/experimental/__stf/stackable/stackable_ctx_impl.cuh",
+              "line_start": 32,
+              "line_end": 32,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "cudax/include/cuda/experimental/__stf/stackable/stackable_node_hierarchy.cuh",
+              "line_start": 27,
+              "line_end": 27,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "cudax/include/cuda/experimental/__stf/utility/memory.cuh",
+              "line_start": 35,
+              "line_end": 35,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header cmath is not used directly (fix available)",
+              "file_path": "cudax/include/cuda/experimental/__stf/utility/pretty_print.cuh",
+              "line_start": 30,
+              "line_end": 30,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header algorithm is not used directly (fix available)",
+              "file_path": "nvrtcc/src/nvrtcc_device_compiler.cpp",
+              "line_start": 11,
+              "line_end": 11,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header new is not used directly (fix available)",
+              "file_path": "thrust/thrust/device_malloc_allocator.h",
+              "line_start": 27,
+              "line_end": 27,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] Included header new is not used directly (fix available)",
+              "file_path": "thrust/thrust/device_new_allocator.h",
+              "line_start": 28,
+              "line_end": 28,
+              "metric_value": 0.0
+            }
+          ]
+        },
+        {
+          "severity": "critical",
+          "threshold": 0,
+          "description": "Code that cannot be reached during execution",
+          "entities": [
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "cub/cub/agent/agent_sub_warp_merge_sort.cuh",
+              "line_start": 112,
+              "line_end": 112,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "cub/cub/device/dispatch/dispatch_segmented_scan.cuh",
+              "line_start": 181,
+              "line_end": 181,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "cub/cub/device/dispatch/dispatch_segmented_scan.cuh",
+              "line_start": 183,
+              "line_end": 183,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "cub/cub/device/dispatch/dispatch_segmented_scan.cuh",
+              "line_start": 234,
+              "line_end": 234,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "cub/cub/warp/specializations/warp_redux.cuh",
+              "line_start": 125,
+              "line_end": 125,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "cudax/include/cuda/experimental/__detail/type_traits.cuh",
+              "line_start": 51,
+              "line_end": 51,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "cudax/include/cuda/experimental/__execution/concepts.cuh",
+              "line_start": 93,
+              "line_end": 93,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "cudax/include/cuda/experimental/__execution/rcvr_ref.cuh",
+              "line_start": 94,
+              "line_end": 94,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "cudax/include/cuda/experimental/__execution/sync_wait.cuh",
+              "line_start": 213,
+              "line_end": 213,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "cudax/include/cuda/experimental/__execution/utility.cuh",
+              "line_start": 158,
+              "line_end": 158,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "cudax/include/cuda/experimental/__stf/internal/data_interface.cuh",
+              "line_start": 125,
+              "line_end": 125,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "cudax/include/cuda/experimental/__stf/utility/exception_policy.cuh",
+              "line_start": 434,
+              "line_end": 434,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "cudax/include/cuda/experimental/__stf/utility/exception_policy.cuh",
+              "line_start": 581,
+              "line_end": 581,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "cudax/include/cuda/experimental/__stf/utility/exception_policy.cuh",
+              "line_start": 612,
+              "line_end": 612,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "cudax/include/cuda/experimental/__stf/utility/exception_policy.cuh",
+              "line_start": 735,
+              "line_end": 735,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "cudax/include/cuda/experimental/__stf/utility/exception_policy.cuh",
+              "line_start": 875,
+              "line_end": 875,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "cudax/include/cuda/experimental/__stf/utility/exception_policy.cuh",
+              "line_start": 2060,
+              "line_end": 2060,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "cudax/include/cuda/experimental/__stf/utility/exception_policy.cuh",
+              "line_start": 3123,
+              "line_end": 3123,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "cudax/include/cuda/experimental/mgmn/__nccl/nccl_api.h",
+              "line_start": 338,
+              "line_end": 338,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "cudax/include/cuda/experimental/mgmn/__nccl/nccl_api.h",
+              "line_start": 374,
+              "line_end": 374,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "libcudacxx/include/cuda/__utility/__basic_any/basic_any_from.h",
+              "line_start": 67,
+              "line_end": 67,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "libcudacxx/include/cuda/__utility/__basic_any/basic_any_from.h",
+              "line_start": 90,
+              "line_end": 90,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "libcudacxx/include/cuda/__utility/__basic_any/virtual_functions.h",
+              "line_start": 80,
+              "line_end": 80,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "libcudacxx/include/cuda/std/__atomic/functions/dispatch.h",
+              "line_start": 174,
+              "line_end": 174,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "libcudacxx/include/cuda/std/__atomic/functions/dispatch.h",
+              "line_start": 215,
+              "line_end": 215,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "libcudacxx/include/cuda/std/__format/validation.h",
+              "line_start": 233,
+              "line_end": 233,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Unknown type name 'unreachable_sentinel_t'",
+              "file_path": "libcudacxx/include/cuda/std/__ranges/repeat_view.h",
+              "line_start": 76,
+              "line_end": 76,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier 'unreachable_sentinel_t'",
+              "file_path": "libcudacxx/include/cuda/std/__ranges/repeat_view.h",
+              "line_start": 80,
+              "line_end": 80,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Use of undeclared identifier '_CCCL_UNREACHABLE'",
+              "file_path": "libcudacxx/include/cuda/std/__variant/visit.h",
+              "line_start": 86,
+              "line_end": 86,
+              "metric_value": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "check_name": "function_size",
+      "description": "Checks that functions/methods do not exceed line count thresholds",
+      "languages": [
+        "javascript"
+      ],
+      "check_type": "standard",
+      "total_entities_checked": 65,
+      "findings_count": 6,
+      "warning_count": 6,
+      "score": 0.9076923076923077,
+      "finding_groups": [
+        {
+          "severity": "warning",
+          "threshold": 150,
+          "description": "Functions exceeding 150.0 lines",
+          "entities": [
+            {
+              "entity_name": "docs._static.coop-load.<function>",
+              "file_path": "docs/_static/coop-load.js",
+              "line_start": 8,
+              "line_end": 397,
+              "metric_value": 389
+            },
+            {
+              "entity_name": "docs._static.coop-explorer.<function>",
+              "file_path": "docs/_static/coop-explorer.js",
+              "line_start": 8,
+              "line_end": 332,
+              "metric_value": 324
+            },
+            {
+              "entity_name": "docs._static.coop-load.<function>.mount",
+              "file_path": "docs/_static/coop-load.js",
+              "line_start": 66,
+              "line_end": 385,
+              "metric_value": 319
+            },
+            {
+              "entity_name": "docs._static.coop-explorer.<function>.mount",
+              "file_path": "docs/_static/coop-explorer.js",
+              "line_start": 23,
+              "line_end": 311,
+              "metric_value": 288
+            },
+            {
+              "entity_name": "docs._static.search_postprocess.<function>",
+              "file_path": "docs/_static/search_postprocess.js",
+              "line_start": 3,
+              "line_end": 265,
+              "metric_value": 262
+            },
+            {
+              "entity_name": "docs._static.search_scorer.Scorer.score",
+              "file_path": "docs/_static/search_scorer.js",
+              "line_start": 41,
+              "line_end": 223,
+              "metric_value": 182
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "check_name": "circular_dependencies",
+      "description": "Detects circular dependencies between packages",
+      "languages": [
+        "javascript"
+      ],
+      "check_type": "circular_dependencies",
+      "cycles": [],
+      "packages_checked": 2,
+      "packages_in_cycles": 0
+    },
+    {
+      "check_name": "unused_code_diagnostics",
+      "description": "Detects unused imports, variables, functions, and dead code via LSP diagnostics",
+      "languages": [
+        "javascript"
+      ],
+      "check_type": "standard",
+      "total_entities_checked": 1,
+      "findings_count": 1,
+      "warning_count": 0,
+      "score": 0.95,
+      "finding_groups": [
+        {
+          "severity": "info",
+          "threshold": 0,
+          "description": "Variables declared but never used",
+          "entities": [
+            {
+              "entity_name": "[unused_variable] 'mutations' is declared but its value is never read.",
+              "file_path": "docs/_static/search_postprocess.js",
+              "line_start": 196,
+              "line_end": 196,
+              "metric_value": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "check_name": "function_size",
+      "description": "Checks that functions/methods do not exceed line count thresholds",
+      "languages": [
+        "python"
+      ],
+      "check_type": "standard",
+      "total_entities_checked": 2069,
+      "findings_count": 25,
+      "warning_count": 25,
+      "score": 0.9879168680521991,
+      "finding_groups": [
+        {
+          "severity": "warning",
+          "threshold": 150,
+          "description": "Functions exceeding 150.0 lines",
+          "entities": [
+            {
+              "entity_name": "python.cuda_cccl.cuda.compute._jit._make_struct_type",
+              "file_path": "python/cuda_cccl/cuda/compute/_jit.py",
+              "line_start": 228,
+              "line_end": 664,
+              "metric_value": 436
+            },
+            {
+              "entity_name": "python.cuda_coop.cuda.coop.numba_mlir._types.Algorithm._source_code",
+              "file_path": "python/cuda_coop/cuda/coop/numba_mlir/_types.py",
+              "line_start": 1706,
+              "line_end": 2067,
+              "metric_value": 361
+            },
+            {
+              "entity_name": "python.cuda_coop.cuda.coop.numba_mlir._compiler._rewrite_arguments._ArgumentRewrite._validate_and_split_args",
+              "file_path": "python/cuda_coop/cuda/coop/numba_mlir/_compiler/_rewrite_arguments.py",
+              "line_start": 41,
+              "line_end": 393,
+              "metric_value": 352
+            },
+            {
+              "entity_name": "docs._ext.auto_api_generator.generate_member_api_page",
+              "file_path": "docs/_ext/auto_api_generator.py",
+              "line_start": 698,
+              "line_end": 977,
+              "metric_value": 279
+            },
+            {
+              "entity_name": "python.cuda_coop.cuda.coop._core.group.load_store._plan_load_store",
+              "file_path": "python/cuda_coop/cuda/coop/_core/group/load_store.py",
+              "line_start": 335,
+              "line_end": 593,
+              "metric_value": 258
+            },
+            {
+              "entity_name": "python.cuda_coop.cuda.coop.numba_mlir._lowering._core.NumbaMlirCoreAdapter.materialize",
+              "file_path": "python/cuda_coop/cuda/coop/numba_mlir/_lowering/_core.py",
+              "line_start": 426,
+              "line_end": 677,
+              "metric_value": 251
+            },
+            {
+              "entity_name": "ci.compile_time.summarize_events.main",
+              "file_path": "ci/compile_time/summarize_events.py",
+              "line_start": 1718,
+              "line_end": 1957,
+              "metric_value": 239
+            },
+            {
+              "entity_name": "docs._ext.auto_api_generator.generate_api_docs",
+              "file_path": "docs/_ext/auto_api_generator.py",
+              "line_start": 1306,
+              "line_end": 1536,
+              "metric_value": 230
+            },
+            {
+              "entity_name": "docs._ext.auto_api_generator.extract_doxygen_items",
+              "file_path": "docs/_ext/auto_api_generator.py",
+              "line_start": 201,
+              "line_end": 421,
+              "metric_value": 220
+            },
+            {
+              "entity_name": "python.cuda_coop.cuda.coop._core.group._resolution.resolve_thread_group",
+              "file_path": "python/cuda_coop/cuda/coop/_core/group/_resolution.py",
+              "line_start": 64,
+              "line_end": 275,
+              "metric_value": 211
+            },
+            {
+              "entity_name": "python.cuda_coop.cuda.coop.numba_mlir._compiler._rewrite_storage._StorageRewrite._validate_temp_storage_uses",
+              "file_path": "python/cuda_coop/cuda/coop/numba_mlir/_compiler/_rewrite_storage.py",
+              "line_start": 1531,
+              "line_end": 1725,
+              "metric_value": 194
+            },
+            {
+              "entity_name": "python.cuda_coop.cuda.coop.numba_mlir._compiler._group_planning.GroupPlanningContext._validate_provider_contract",
+              "file_path": "python/cuda_coop/cuda/coop/numba_mlir/_compiler/_group_planning.py",
+              "line_start": 245,
+              "line_end": 426,
+              "metric_value": 181
+            },
+            {
+              "entity_name": "python.cuda_coop.cuda.coop._core.warp.load_store.make_warp_load_store_semantics",
+              "file_path": "python/cuda_coop/cuda/coop/_core/warp/load_store.py",
+              "line_start": 323,
+              "line_end": 503,
+              "metric_value": 180
+            },
+            {
+              "entity_name": "python.cuda_coop.cuda.coop.numba_mlir._compiler._operations.RewriteOperationSpecification.__post_init__",
+              "file_path": "python/cuda_coop/cuda/coop/numba_mlir/_compiler/_operations.py",
+              "line_start": 318,
+              "line_end": 492,
+              "metric_value": 174
+            },
+            {
+              "entity_name": "python.cuda_coop.cuda.coop.numba_mlir._lowering._core.NumbaMlirCoreAdapter.lower_parameter",
+              "file_path": "python/cuda_coop/cuda/coop/numba_mlir/_lowering/_core.py",
+              "line_start": 231,
+              "line_end": 405,
+              "metric_value": 174
+            },
+            {
+              "entity_name": "python.cuda_coop.cuda.coop.numba_mlir._compiler._nvrtc.compile_impl",
+              "file_path": "python/cuda_coop/cuda/coop/numba_mlir/_compiler/_nvrtc.py",
+              "line_start": 346,
+              "line_end": 518,
+              "metric_value": 172
+            },
+            {
+              "entity_name": "python.cuda_coop.cuda.coop.numba_mlir._types.prepare_ltoir_bundle",
+              "file_path": "python/cuda_coop/cuda/coop/numba_mlir/_types.py",
+              "line_start": 2577,
+              "line_end": 2749,
+              "metric_value": 172
+            },
+            {
+              "entity_name": "python.cuda_coop.cuda.coop.numba_mlir._compiler._rewrite_load_store._LoadStoreRewrite._infer_load_store_payload",
+              "file_path": "python/cuda_coop/cuda/coop/numba_mlir/_compiler/_rewrite_load_store.py",
+              "line_start": 384,
+              "line_end": 551,
+              "metric_value": 167
+            },
+            {
+              "entity_name": "python.cuda_coop.cuda.coop.numba_mlir._compiler._rewrite_storage._StorageRewrite._emit_temp_storage_auto_sync",
+              "file_path": "python/cuda_coop/cuda/coop/numba_mlir/_compiler/_rewrite_storage.py",
+              "line_start": 1332,
+              "line_end": 1499,
+              "metric_value": 167
+            },
+            {
+              "entity_name": "python.cuda_coop.cuda.coop.numba_mlir._lowering._load_store._load",
+              "file_path": "python/cuda_coop/cuda/coop/numba_mlir/_lowering/_load_store.py",
+              "line_start": 216,
+              "line_end": 377,
+              "metric_value": 161
+            },
+            {
+              "entity_name": "python.cuda_coop.cuda.coop.numba_mlir._compiler._rewrite_storage._StorageRewrite._validate_storage_match_plan",
+              "file_path": "python/cuda_coop/cuda/coop/numba_mlir/_compiler/_rewrite_storage.py",
+              "line_start": 70,
+              "line_end": 228,
+              "metric_value": 158
+            },
+            {
+              "entity_name": "python.cuda_coop.cuda.coop.numba_mlir._compiler._group_load_store._LoadStorePlanning._plan_load_store",
+              "file_path": "python/cuda_coop/cuda/coop/numba_mlir/_compiler/_group_load_store.py",
+              "line_start": 317,
+              "line_end": 473,
+              "metric_value": 156
+            },
+            {
+              "entity_name": "python.cuda_coop.cuda.coop._core.block.load_store.make_block_load_store_semantics",
+              "file_path": "python/cuda_coop/cuda/coop/_core/block/load_store.py",
+              "line_start": 293,
+              "line_end": 448,
+              "metric_value": 155
+            },
+            {
+              "entity_name": "python.cuda_coop.cuda.coop.numba_mlir._compiler._group_load_store._LoadStorePlanning._lower_load_store",
+              "file_path": "python/cuda_coop/cuda/coop/numba_mlir/_compiler/_group_load_store.py",
+              "line_start": 660,
+              "line_end": 813,
+              "metric_value": 153
+            },
+            {
+              "entity_name": "docs._ext.auto_api_generator.generate_namespace_api_page",
+              "file_path": "docs/_ext/auto_api_generator.py",
+              "line_start": 1152,
+              "line_end": 1303,
+              "metric_value": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "check_name": "circular_dependencies",
+      "description": "Detects circular dependencies between packages",
+      "languages": [
+        "python"
+      ],
+      "check_type": "circular_dependencies",
+      "cycles": [
+        "python.cuda_coop.cuda.coop.numba_mlir._lowering -> python.cuda_coop.cuda.coop.numba_mlir -> python.cuda_coop.cuda.coop.numba_mlir._compiler -> python.cuda_coop.cuda.coop.numba_mlir._lowering",
+        "python.cuda_coop.cuda.coop.numba_mlir._lowering -> python.cuda_coop.cuda.coop.numba_mlir._compiler -> python.cuda_coop.cuda.coop.numba_mlir._lowering",
+        "python.cuda_coop.cuda.coop.numba_mlir._compiler -> python.cuda_coop.cuda.coop.numba_mlir -> python.cuda_coop.cuda.coop.numba_mlir._compiler",
+        "python.cuda_cccl.cuda.compute -> python.cuda_cccl.cuda.compute._utils -> python.cuda_cccl.cuda.compute",
+        "python.cuda_cccl.cuda.compute -> python.cuda_cccl.cuda.compute.iterators -> python.cuda_cccl.cuda.compute",
+        "python.cuda_cccl.cuda.compute -> python.cuda_cccl.cuda.compute.iterators -> python.cuda_cccl.cuda.compute._utils -> python.cuda_cccl.cuda.compute"
+      ],
+      "packages_checked": 40,
+      "packages_in_cycles": 6
+    },
+    {
+      "check_name": "unused_code_diagnostics",
+      "description": "Detects unused imports, variables, functions, and dead code via LSP diagnostics",
+      "languages": [
+        "python"
+      ],
+      "check_type": "standard",
+      "total_entities_checked": 113,
+      "findings_count": 113,
+      "warning_count": 9,
+      "score": 0.0,
+      "finding_groups": [
+        {
+          "severity": "info",
+          "threshold": 0,
+          "description": "Variables declared but never used",
+          "entities": [
+            {
+              "entity_name": "[unused_variable] \"exc_type\" is not accessed",
+              "file_path": "ci/inspect_changes.py",
+              "line_start": 32,
+              "line_end": 32,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"idx\" is not accessed",
+              "file_path": "ci/inspect_changes.py",
+              "line_start": 626,
+              "line_end": 626,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_extra_args\" is not accessed",
+              "file_path": "ci/ninja_summary.py",
+              "line_start": 349,
+              "line_end": 349,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"timing\" is not accessed",
+              "file_path": "ci/compile_time/summarize_events.py",
+              "line_start": 1013,
+              "line_end": 1013,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"msg\" is not accessed",
+              "file_path": "ci/util/publish_slack_notification.py",
+              "line_start": 23,
+              "line_end": 23,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"project_name\" is not accessed",
+              "file_path": "docs/_ext/auto_api_generator.py",
+              "line_start": 548,
+              "line_end": 548,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"refid\" is not accessed",
+              "file_path": "docs/_ext/auto_api_generator.py",
+              "line_start": 702,
+              "line_end": 702,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"refid\" is not accessed",
+              "file_path": "docs/_ext/auto_api_generator.py",
+              "line_start": 795,
+              "line_end": 795,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"refid\" is not accessed",
+              "file_path": "docs/_ext/auto_api_generator.py",
+              "line_start": 853,
+              "line_end": 853,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"refid\" is not accessed",
+              "file_path": "docs/_ext/auto_api_generator.py",
+              "line_start": 924,
+              "line_end": 924,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"project_name\" is not accessed",
+              "file_path": "docs/_ext/auto_api_generator.py",
+              "line_start": 980,
+              "line_end": 980,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"app\" is not accessed",
+              "file_path": "docs/_ext/coop_visualization.py",
+              "line_start": 27,
+              "line_end": 27,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"templatename\" is not accessed",
+              "file_path": "docs/_ext/coop_visualization.py",
+              "line_start": 73,
+              "line_end": 73,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_event\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/gdb/memory_pool.py",
+              "line_start": 133,
+              "line_end": 133,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"__lldb_init_module\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/__init__.py",
+              "line_start": 54,
+              "line_end": 54,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/annotated_ptr.py",
+              "line_start": 19,
+              "line_end": 19,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/annotated_ptr.py",
+              "line_start": 24,
+              "line_end": 24,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/atomic.py",
+              "line_start": 40,
+              "line_end": 40,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/atomic.py",
+              "line_start": 47,
+              "line_end": 47,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/atomic.py",
+              "line_start": 61,
+              "line_end": 61,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/atomic.py",
+              "line_start": 97,
+              "line_end": 97,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/buffer.py",
+              "line_start": 31,
+              "line_end": 31,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/buffer.py",
+              "line_start": 88,
+              "line_end": 88,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/buffer.py",
+              "line_start": 104,
+              "line_end": 104,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/complex.py",
+              "line_start": 68,
+              "line_end": 68,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/complex.py",
+              "line_start": 76,
+              "line_end": 76,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/event.py",
+              "line_start": 27,
+              "line_end": 27,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/event.py",
+              "line_start": 42,
+              "line_end": 42,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/hierarchy.py",
+              "line_start": 25,
+              "line_end": 25,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/hierarchy.py",
+              "line_start": 30,
+              "line_end": 30,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/hierarchy.py",
+              "line_start": 136,
+              "line_end": 136,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/hierarchy.py",
+              "line_start": 145,
+              "line_end": 145,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/hierarchy.py",
+              "line_start": 157,
+              "line_end": 157,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/inplace_vector.py",
+              "line_start": 20,
+              "line_end": 20,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/inplace_vector.py",
+              "line_start": 27,
+              "line_end": 27,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/inplace_vector.py",
+              "line_start": 49,
+              "line_end": 49,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/mdspan.py",
+              "line_start": 41,
+              "line_end": 41,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/mdspan.py",
+              "line_start": 307,
+              "line_end": 307,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/mdspan.py",
+              "line_start": 330,
+              "line_end": 330,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/memory_pool.py",
+              "line_start": 100,
+              "line_end": 100,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/memory_pool.py",
+              "line_start": 223,
+              "line_end": 223,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/memory_pool.py",
+              "line_start": 241,
+              "line_end": 241,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/memory_resource.py",
+              "line_start": 21,
+              "line_end": 21,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/memory_resource.py",
+              "line_start": 61,
+              "line_end": 61,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/memory_resource.py",
+              "line_start": 79,
+              "line_end": 79,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/optional.py",
+              "line_start": 19,
+              "line_end": 19,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/optional.py",
+              "line_start": 44,
+              "line_end": 44,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/optional.py",
+              "line_start": 54,
+              "line_end": 54,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/shared_resource.py",
+              "line_start": 19,
+              "line_end": 19,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/shared_resource.py",
+              "line_start": 59,
+              "line_end": 59,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/shared_resource.py",
+              "line_start": 98,
+              "line_end": 98,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/span.py",
+              "line_start": 19,
+              "line_end": 19,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/span.py",
+              "line_start": 36,
+              "line_end": 36,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/std_array.py",
+              "line_start": 19,
+              "line_end": 19,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/std_array.py",
+              "line_start": 27,
+              "line_end": 27,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/stream.py",
+              "line_start": 107,
+              "line_end": 107,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/stream.py",
+              "line_start": 242,
+              "line_end": 242,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/stream.py",
+              "line_start": 271,
+              "line_end": 271,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/tuple.py",
+              "line_start": 20,
+              "line_end": 20,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/tuple.py",
+              "line_start": 35,
+              "line_end": 35,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_internal_dict\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/tuple.py",
+              "line_start": 142,
+              "line_end": 142,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_BINDINGS_AVAILABLE\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_bindings.py",
+              "line_start": 75,
+              "line_end": 75,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_BINDINGS_AVAILABLE\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_bindings.py",
+              "line_start": 81,
+              "line_end": 81,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_is_well_known_op\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_cccl_interop.py",
+              "line_start": 95,
+              "line_end": 95,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"val\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_jit.py",
+              "line_start": 323,
+              "line_end": 323,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"context\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_jit.py",
+              "line_start": 357,
+              "line_end": 357,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"kwargs\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_jit.py",
+              "line_start": 414,
+              "line_end": 414,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"builder\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_jit.py",
+              "line_start": 497,
+              "line_end": 497,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"kwargs\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_jit.py",
+              "line_start": 566,
+              "line_end": 566,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"context\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_jit.py",
+              "line_start": 598,
+              "line_end": 598,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"context\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_jit.py",
+              "line_start": 641,
+              "line_end": 641,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"StructModel\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_jit.py",
+              "line_start": 334,
+              "line_end": 334,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"StructAttributeTemplate\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_jit.py",
+              "line_start": 350,
+              "line_end": 350,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"StructGetItem\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_jit.py",
+              "line_start": 367,
+              "line_end": 367,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"args\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_mlir.py",
+              "line_start": 139,
+              "line_end": 139,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"value\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_odr_helpers.py",
+              "line_start": 77,
+              "line_end": 77,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"kwargs\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_odr_helpers.py",
+              "line_start": 113,
+              "line_end": 113,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_dtype_var\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_odr_helpers.py",
+              "line_start": 116,
+              "line_end": 116,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_mtime\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_pch.py",
+              "line_start": 313,
+              "line_end": 313,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"_PROXY_VALUE_DATA_ERROR\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_proxy.py",
+              "line_start": 26,
+              "line_end": 26,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"input_types\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/op.py",
+              "line_start": 35,
+              "line_end": 35,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"input_types\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/op.py",
+              "line_start": 64,
+              "line_end": 64,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"input_types\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/op.py",
+              "line_start": 180,
+              "line_end": 180,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"op\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/op.py",
+              "line_start": 248,
+              "line_end": 248,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"w\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_serialization/serializable.py",
+              "line_start": 32,
+              "line_end": 32,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"r\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_serialization/serializable.py",
+              "line_start": 35,
+              "line_end": 35,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"obj\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_serialization/serializable.py",
+              "line_start": 48,
+              "line_end": 48,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"obj\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_serialization/serializable.py",
+              "line_start": 51,
+              "line_end": 51,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"obj\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_serialization/serializable.py",
+              "line_start": 68,
+              "line_end": 68,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"obj\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_serialization/serializable.py",
+              "line_start": 71,
+              "line_end": 71,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"obj\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_serialization/serializable.py",
+              "line_start": 83,
+              "line_end": 83,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"obj\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_serialization/serializable.py",
+              "line_start": 86,
+              "line_end": 86,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"obj\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_serialization/serializable.py",
+              "line_start": 101,
+              "line_end": 101,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"obj\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_serialization/serializable.py",
+              "line_start": 104,
+              "line_end": 104,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"obj\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_serialization/serializable.py",
+              "line_start": 123,
+              "line_end": 123,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"obj\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_serialization/serializable.py",
+              "line_start": 126,
+              "line_end": 126,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"obj\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_serialization/serializable.py",
+              "line_start": 153,
+              "line_end": 153,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"obj\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_serialization/serializable.py",
+              "line_start": 168,
+              "line_end": 168,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"data_ptr\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/algorithms/_binary_search.py",
+              "line_start": 163,
+              "line_end": 163,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"out_ptr\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/algorithms/_binary_search.py",
+              "line_start": 164,
+              "line_end": 164,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_variable] \"uses_privatized_smem\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/algorithms/_histogram.py",
+              "line_start": 150,
+              "line_end": 150,
+              "metric_value": 0.0
+            }
+          ]
+        },
+        {
+          "severity": "info",
+          "threshold": 0,
+          "description": "Code that cannot be reached during execution",
+          "entities": [
+            {
+              "entity_name": "[unreachable_code] Type analysis indicates code is unreachable",
+              "file_path": "ci/compile_time/summarize_events.py",
+              "line_start": 1216,
+              "line_end": 1216,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Code is unreachable",
+              "file_path": "python/cuda_cccl/cuda/compute/_bindings.py",
+              "line_start": 63,
+              "line_end": 73,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unreachable_code] Code is unreachable",
+              "file_path": "python/cuda_cccl/cuda/compute/_pch.py",
+              "line_start": 76,
+              "line_end": 79,
+              "metric_value": 0.0
+            }
+          ]
+        },
+        {
+          "severity": "warning",
+          "threshold": 0,
+          "description": "Functions/methods defined but never called",
+          "entities": [
+            {
+              "entity_name": "[unused_function] Function \"__lldb_init_module\" is not accessed",
+              "file_path": "libcudacxx/share/libcudacxx/lldb/__init__.py",
+              "line_start": 54,
+              "line_end": 54,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_function] Function \"_is_well_known_op\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_cccl_interop.py",
+              "line_start": 95,
+              "line_end": 95,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_function] Function \"typeof_struct\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_jit.py",
+              "line_start": 323,
+              "line_end": 323,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_function] Function \"lower_struct_getattr\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_jit.py",
+              "line_start": 357,
+              "line_end": 357,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_function] Function \"tuple_to_struct_cast\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_jit.py",
+              "line_start": 598,
+              "line_end": 598,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_function] Function \"cast_struct_to_struct\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_jit.py",
+              "line_start": 641,
+              "line_end": 641,
+              "metric_value": 0.0
+            }
+          ]
+        },
+        {
+          "severity": "warning",
+          "threshold": 0,
+          "description": "Classes defined but never instantiated",
+          "entities": [
+            {
+              "entity_name": "[unused_class] Class \"StructModel\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_jit.py",
+              "line_start": 334,
+              "line_end": 334,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_class] Class \"StructAttributeTemplate\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_jit.py",
+              "line_start": 350,
+              "line_end": 350,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_class] Class \"StructGetItem\" is not accessed",
+              "file_path": "python/cuda_cccl/cuda/compute/_jit.py",
+              "line_start": 367,
+              "line_end": 367,
+              "metric_value": 0.0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "file_summaries": [
+    {
+      "file_path": "python/cuda_cccl/cuda/compute/_jit.py",
+      "total_findings": 18,
+      "warning_findings": 8,
+      "composite_risk_score": 90.0
+    },
+    {
+      "file_path": "c/parallel.v2/src/hostjit/libnvcc/compiler.cpp",
+      "total_findings": 7,
+      "warning_findings": 7,
+      "composite_risk_score": 85.0
+    },
+    {
+      "file_path": "c/parallel/src/merge_sort.cu",
+      "total_findings": 6,
+      "warning_findings": 6,
+      "composite_risk_score": 80.0
+    },
+    {
+      "file_path": "cudax/include/cuda/experimental/__stf/internal/logical_data.cuh",
+      "total_findings": 5,
+      "warning_findings": 5,
+      "composite_risk_score": 75.0
+    },
+    {
+      "file_path": "docs/_ext/auto_api_generator.py",
+      "total_findings": 10,
+      "warning_findings": 4,
+      "composite_risk_score": 70.0
+    },
+    {
+      "file_path": "cub/cub/device/dispatch/tuning/tuning_batched_topk.cuh",
+      "total_findings": 4,
+      "warning_findings": 4,
+      "composite_risk_score": 60.0
+    },
+    {
+      "file_path": "cudax/include/cuda/experimental/__stf/utility/exception_policy.cuh",
+      "total_findings": 7,
+      "warning_findings": 0,
+      "composite_risk_score": 50.0
+    },
+    {
+      "file_path": "libcudacxx/share/libcudacxx/lldb/hierarchy.py",
+      "total_findings": 5,
+      "warning_findings": 0,
+      "composite_risk_score": 50.0
+    },
+    {
+      "file_path": "python/cuda_cccl/cuda/compute/_serialization/serializable.py",
+      "total_findings": 14,
+      "warning_findings": 0,
+      "composite_risk_score": 50.0
+    },
+    {
+      "file_path": "cub/cub/device/dispatch/tuning/tuning_select_if.cuh",
+      "total_findings": 3,
+      "warning_findings": 3,
+      "composite_risk_score": 45.0
+    },
+    {
+      "file_path": "c/parallel/src/segmented_sort.cu",
+      "total_findings": 3,
+      "warning_findings": 3,
+      "composite_risk_score": 45.0
+    },
+    {
+      "file_path": "c/parallel/src/radix_sort.cu",
+      "total_findings": 3,
+      "warning_findings": 3,
+      "composite_risk_score": 45.0
+    },
+    {
+      "file_path": "c/parallel/src/three_way_partition.cu",
+      "total_findings": 3,
+      "warning_findings": 3,
+      "composite_risk_score": 45.0
+    },
+    {
+      "file_path": "cub/cub/device/dispatch/tuning/tuning_unique_by_key.cuh",
+      "total_findings": 3,
+      "warning_findings": 3,
+      "composite_risk_score": 45.0
+    },
+    {
+      "file_path": "c/parallel/src/histogram.cu",
+      "total_findings": 3,
+      "warning_findings": 3,
+      "composite_risk_score": 45.0
+    },
+    {
+      "file_path": "c/parallel/src/transform.cu",
+      "total_findings": 3,
+      "warning_findings": 3,
+      "composite_risk_score": 45.0
+    },
+    {
+      "file_path": "c/parallel/src/jit_templates/jit_entry.h",
+      "total_findings": 3,
+      "warning_findings": 3,
+      "composite_risk_score": 45.0
+    },
+    {
+      "file_path": "c/parallel/src/jit_templates/templates/output_iterator.h",
+      "total_findings": 3,
+      "warning_findings": 3,
+      "composite_risk_score": 45.0
+    },
+    {
+      "file_path": "c/parallel.v2/src/hostjit/include/hostjit/cuda_minimal/__clang_cuda_runtime_wrapper.h",
+      "total_findings": 3,
+      "warning_findings": 3,
+      "composite_risk_score": 45.0
+    },
+    {
+      "file_path": "python/cuda_coop/cuda/coop/numba_mlir/_compiler/_rewrite_storage.py",
+      "total_findings": 3,
+      "warning_findings": 3,
+      "composite_risk_score": 45.0
+    }
+  ]
+}
