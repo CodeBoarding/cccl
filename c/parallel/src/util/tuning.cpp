@@ -10,9 +10,9 @@
 
 #include "tuning.h"
 
-#include <algorithm>
+#include <cub/util_math.cuh>
 
 int nominal_4b_items_to_items(int nominal_4b_items_per_thread, int key_size)
 {
-  return std::clamp(nominal_4b_items_per_thread * 4 / key_size, 1, nominal_4b_items_per_thread);
+  return cub::detail::nominal_4B_items_to_items(nominal_4b_items_per_thread, key_size);
 }
