@@ -21,6 +21,7 @@
 #  pragma system_header
 #endif // no system header
 
+#include <cuda/std/__bit/popcount.h>
 #include <cuda/std/__concepts/concept_macros.h>
 #include <cuda/std/__limits/numeric_limits.h>
 #include <cuda/std/__type_traits/conditional.h> // IWYU pragma: keep
@@ -55,38 +56,9 @@ _CCCL_BEGIN_NAMESPACE_CUDA_STD
 template <typename _Tp>
 [[nodiscard]] _CCCL_API constexpr int __cccl_countr_zero_impl_constexpr(_Tp __v) noexcept
 {
-  constexpr auto __digits = numeric_limits<uint32_t>::digits;
-
-  if (__v == 0)
-  {
-    return __digits;
-  }
-
-  if constexpr (sizeof(_Tp) == sizeof(uint32_t))
-  {
-    if (__v & 1)
-    {
-      return 0;
-    }
-    int __pos = 1;
-    for (int __i = __digits / 2; __i >= 2; __i /= 2)
-    {
-      const auto __mark = ~uint32_t{0} >> (__digits - __i);
-      if ((__v & __mark) == 0)
-      {
-        __v >>= __i;
-        __pos += __i;
-      }
-    }
-    return (__pos - (__v & 1));
-  }
-  else
-  {
-    const auto __hi = static_cast<uint32_t>(__v >> 32);
-    const auto __lo = static_cast<uint32_t>(__v);
-    return (__lo != 0) ? ::cuda::std::__cccl_countr_zero_impl_constexpr(__lo)
-                       : numeric_limits<uint32_t>::digits + ::cuda::std::__cccl_countr_zero_impl_constexpr(__hi);
-  }
+  // Subtracting one sets exactly the bits below the lowest set bit. For zero,
+  // unsigned wraparound makes the mask all ones, yielding the full bit width.
+  return ::cuda::std::popcount(static_cast<_Tp>((__v - _Tp{1}) & ~__v));
 }
 
 #  if !_CCCL_COMPILER(NVRTC)
