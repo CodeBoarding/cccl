@@ -18,6 +18,8 @@
 
 #include <cub/util_device.cuh>
 
+#include <thrust/system/cuda/detail/terminate.h>
+
 #include <cuda/std/__host_stdlib/cstdio>
 
 #include <nv/target>
@@ -178,22 +180,22 @@ _CCCL_HOST_DEVICE inline void throw_on_error(cudaError_t status)
     // instructions out of the target logic.
 #ifdef THRUST_RDC_ENABLED
 
-#  define THRUST_TEMP_DEVICE_CODE \
-    printf("Thrust CUDA backend error: %s: %s\n", cudaGetErrorName(status), cudaGetErrorString(status))
+#  define THRUST_TEMP_DEVICE_CODE                                     \
+    THRUST_NS_QUALIFIER::system::cuda::detail::terminate_with_format( \
+      "Thrust CUDA backend error: %s: %s\n", cudaGetErrorName(status), cudaGetErrorString(status))
 
 #else
 
-#  define THRUST_TEMP_DEVICE_CODE printf("Thrust CUDA backend error: %d\n", static_cast<int>(status))
+#  define THRUST_TEMP_DEVICE_CODE                                     \
+    THRUST_NS_QUALIFIER::system::cuda::detail::terminate_with_format( \
+      "Thrust CUDA backend error: %d\n", static_cast<int>(status))
 
 #endif
 
 #if _CCCL_HOSTED()
-    NV_IF_TARGET(NV_IS_HOST,
-                 (throw thrust::system_error(status, thrust::cuda_category());),
-                 (THRUST_TEMP_DEVICE_CODE; ::cuda::std::terminate();));
+    NV_IF_TARGET(NV_IS_HOST, (throw thrust::system_error(status, thrust::cuda_category());), (THRUST_TEMP_DEVICE_CODE;));
 #else // ^^^ _CCCL_HOSTED() ^^^ / vvv _CCCL_FREESTANDING() vvv
     THRUST_TEMP_DEVICE_CODE;
-    ::cuda::std::terminate();
 #endif // _CCCL_FREESTANDING()
 
 #undef THRUST_TEMP_DEVICE_CODE
@@ -216,22 +218,23 @@ _CCCL_HOST_DEVICE inline void throw_on_error(cudaError_t status, char const* msg
     // instructions out of the target logic.
 #ifdef THRUST_RDC_ENABLED
 
-#  define THRUST_TEMP_DEVICE_CODE \
-    printf("Thrust CUDA backend error: %s: %s: %s\n", cudaGetErrorName(status), cudaGetErrorString(status), msg)
+#  define THRUST_TEMP_DEVICE_CODE                                     \
+    THRUST_NS_QUALIFIER::system::cuda::detail::terminate_with_format( \
+      "Thrust CUDA backend error: %s: %s: %s\n", cudaGetErrorName(status), cudaGetErrorString(status), msg)
 
 #else
 
-#  define THRUST_TEMP_DEVICE_CODE printf("Thrust CUDA backend error: %d: %s\n", static_cast<int>(status), msg)
+#  define THRUST_TEMP_DEVICE_CODE                                     \
+    THRUST_NS_QUALIFIER::system::cuda::detail::terminate_with_format( \
+      "Thrust CUDA backend error: %d: %s\n", static_cast<int>(status), msg)
 
 #endif
 
 #if _CCCL_HOSTED()
-    NV_IF_TARGET(NV_IS_HOST,
-                 (throw thrust::system_error(status, thrust::cuda_category(), msg);),
-                 (THRUST_TEMP_DEVICE_CODE; ::cuda::std::terminate();));
+    NV_IF_TARGET(
+      NV_IS_HOST, (throw thrust::system_error(status, thrust::cuda_category(), msg);), (THRUST_TEMP_DEVICE_CODE;));
 #else // ^^^ _CCCL_HOSTED() ^^^ / vvv _CCCL_FREESTANDING() vvv
     THRUST_TEMP_DEVICE_CODE;
-    ::cuda::std::terminate();
 #endif // _CCCL_FREESTANDING()
 
 #undef THRUST_TEMP_DEVICE_CODE
