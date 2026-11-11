@@ -30,6 +30,10 @@
 
 #include <cuda/std/__cccl/prologue.h>
 
+#if _CCCL_HAS_BUILTIN(__builtin_bitreverseg)
+#  define _CCCL_BUILTIN_BITREVERSEG(...) __builtin_bitreverseg(__VA_ARGS__)
+#endif // has __builtin_bitreverseg
+
 #if _CCCL_HAS_BUILTIN(__builtin_bitreverse8)
 #  define _CCCL_BUILTIN_BITREVERSE8(...) __builtin_bitreverse8(__VA_ARGS__)
 #endif // has __builtin_bitreverse8
@@ -113,55 +117,59 @@ template <class _Tp>
 template <class _Tp>
 [[nodiscard]] _CCCL_API constexpr _Tp __bit_reverse_impl_host(_Tp __v) noexcept
 {
+#  if defined(_CCCL_BUILTIN_BITREVERSEG)
+  return _CCCL_BUILTIN_BITREVERSEG(__v);
+#  else // ^^^ _CCCL_BUILTIN_BITREVERSEG ^^^ / vvv !_CCCL_BUILTIN_BITREVERSEG vvv
   if constexpr (sizeof(_Tp) == sizeof(uint8_t))
   {
-#  if defined(_CCCL_BUILTIN_BITREVERSE8)
+#    if defined(_CCCL_BUILTIN_BITREVERSE8)
     return _CCCL_BUILTIN_BITREVERSE8(__v);
-#  else // ^^^ _CCCL_BUILTIN_BITREVERSE8 ^^^ / vvv !_CCCL_BUILTIN_BITREVERSE8 vvv
+#    else // ^^^ _CCCL_BUILTIN_BITREVERSE8 ^^^ / vvv !_CCCL_BUILTIN_BITREVERSE8 vvv
     return ::cuda::std::__bit_reverse_impl_generic(__v);
-#  endif // ^^^ !_CCCL_BUILTIN_BITREVERSE8 ^^^
+#    endif // ^^^ !_CCCL_BUILTIN_BITREVERSE8 ^^^
   }
   else if constexpr (sizeof(_Tp) == sizeof(uint16_t))
   {
-#  if defined(_CCCL_BUILTIN_BITREVERSE16)
+#    if defined(_CCCL_BUILTIN_BITREVERSE16)
     return _CCCL_BUILTIN_BITREVERSE16(__v);
-#  else // ^^^ _CCCL_BUILTIN_BITREVERSE16 ^^^ / vvv !_CCCL_BUILTIN_BITREVERSE16 vvv
+#    else // ^^^ _CCCL_BUILTIN_BITREVERSE16 ^^^ / vvv !_CCCL_BUILTIN_BITREVERSE16 vvv
     return ::cuda::std::__bit_reverse_impl_generic(__v);
-#  endif // ^^^ !_CCCL_BUILTIN_BITREVERSE16 ^^^
+#    endif // ^^^ !_CCCL_BUILTIN_BITREVERSE16 ^^^
   }
   else if constexpr (sizeof(_Tp) == sizeof(uint32_t))
   {
-#  if defined(_CCCL_BUILTIN_BITREVERSE32)
+#    if defined(_CCCL_BUILTIN_BITREVERSE32)
     return _CCCL_BUILTIN_BITREVERSE32(__v);
-#  else // ^^^ _CCCL_BUILTIN_BITREVERSE32 ^^^ / vvv !_CCCL_BUILTIN_BITREVERSE32 vvv
+#    else // ^^^ _CCCL_BUILTIN_BITREVERSE32 ^^^ / vvv !_CCCL_BUILTIN_BITREVERSE32 vvv
     return ::cuda::std::__bit_reverse_impl_generic(__v);
-#  endif // ^^^ !_CCCL_BUILTIN_BITREVERSE32 ^^^
+#    endif // ^^^ !_CCCL_BUILTIN_BITREVERSE32 ^^^
   }
   else if constexpr (sizeof(_Tp) == sizeof(uint64_t))
   {
-#  if defined(_CCCL_BUILTIN_BITREVERSE64)
+#    if defined(_CCCL_BUILTIN_BITREVERSE64)
     return _CCCL_BUILTIN_BITREVERSE64(__v);
-#  else // ^^^ _CCCL_BUILTIN_BITREVERSE64 ^^^ / vvv !_CCCL_BUILTIN_BITREVERSE64 vvv
-    return ::cuda::std::__bit_reverse_impl_generic(__v);
-#  endif // ^^^ !_CCCL_BUILTIN_BITREVERSE64 ^^^
-  }
-#  if _CCCL_HAS_INT128()
-  else if constexpr (sizeof(_Tp) == sizeof(__uint128_t))
-  {
-#    if defined(_CCCL_BUILTIN_BITREVERSE128)
-    return _CCCL_BUILTIN_BITREVERSE128(__v);
-#    elif defined(_CCCL_BUILTIN_BITREVERSE64)
-    return (__uint128_t{_CCCL_BUILTIN_BITREVERSE64(static_cast<uint64_t>(__v))} << 64)
-         | _CCCL_BUILTIN_BITREVERSE64(static_cast<uint64_t>(__v >> 64));
 #    else // ^^^ _CCCL_BUILTIN_BITREVERSE64 ^^^ / vvv !_CCCL_BUILTIN_BITREVERSE64 vvv
     return ::cuda::std::__bit_reverse_impl_generic(__v);
 #    endif // ^^^ !_CCCL_BUILTIN_BITREVERSE64 ^^^
   }
-#  endif // _CCCL_HAS_INT128()
+#    if _CCCL_HAS_INT128()
+  else if constexpr (sizeof(_Tp) == sizeof(__uint128_t))
+  {
+#      if defined(_CCCL_BUILTIN_BITREVERSE128)
+    return _CCCL_BUILTIN_BITREVERSE128(__v);
+#      elif defined(_CCCL_BUILTIN_BITREVERSE64)
+    return (__uint128_t{_CCCL_BUILTIN_BITREVERSE64(static_cast<uint64_t>(__v))} << 64)
+         | _CCCL_BUILTIN_BITREVERSE64(static_cast<uint64_t>(__v >> 64));
+#      else // ^^^ _CCCL_BUILTIN_BITREVERSE64 ^^^ / vvv !_CCCL_BUILTIN_BITREVERSE64 vvv
+    return ::cuda::std::__bit_reverse_impl_generic(__v);
+#      endif // ^^^ !_CCCL_BUILTIN_BITREVERSE64 ^^^
+  }
+#    endif // _CCCL_HAS_INT128()
   else
   {
     return ::cuda::std::__bit_reverse_impl_generic(__v);
   }
+#  endif // !_CCCL_BUILTIN_BITREVERSEG
 }
 #endif // _CCCL_HOST_COMPILATION()
 

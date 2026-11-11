@@ -20,10 +20,16 @@
 THRUST_NAMESPACE_BEGIN
 namespace system::cuda::detail
 {
+template <class... Args>
+[[noreturn]] inline _CCCL_HOST_DEVICE void terminate_with_format(const char* format, Args... args)
+{
+  printf(format, args...);
+  ::cuda::std::terminate();
+}
+
 inline _CCCL_HOST_DEVICE void terminate_with_message(const char* message)
 {
-  printf("%s\n", message);
-  ::cuda::std::terminate();
+  THRUST_NS_QUALIFIER::system::cuda::detail::terminate_with_format("%s\n", message);
 }
 } // namespace system::cuda::detail
 THRUST_NAMESPACE_END

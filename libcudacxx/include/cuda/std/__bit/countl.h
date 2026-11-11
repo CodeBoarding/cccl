@@ -21,6 +21,7 @@
 #  pragma system_header
 #endif // no system header
 
+#include <cuda/std/__bit/popcount.h>
 #include <cuda/std/__concepts/concept_macros.h>
 #include <cuda/std/__limits/numeric_limits.h>
 #include <cuda/std/__type_traits/conditional.h> // IWYU pragma: keep
@@ -73,17 +74,13 @@ template <typename _Tp>
 #  if defined(_CCCL_BUILTIN_CLZ)
     return _CCCL_BUILTIN_CLZ(__v);
 #  else // ^^^ _CCCL_BUILTIN_CLZ ^^^ // vvv !_CCCL_BUILTIN_CLZ vvv
-    uint32_t __res = 0;
-    for (uint32_t __i = __digits / 2; __i >= 1; __i /= 2)
-    {
-      const auto __mark = (~uint32_t{0} >> (__digits - __i)) << __i;
-      if (__v & __mark)
-      {
-        __v >>= __i;
-        __res |= __i;
-      }
-    }
-    return __digits - 1 - __res;
+    // Fill the bits below the highest set bit; the remaining zeros are leading.
+    __v |= __v >> 1;
+    __v |= __v >> 2;
+    __v |= __v >> 4;
+    __v |= __v >> 8;
+    __v |= __v >> 16;
+    return ::cuda::std::popcount(static_cast<_Tp>(~__v));
 #  endif // ^^^ !_CCCL_BUILTIN_CLZ ^^^
   }
   else
