@@ -48,8 +48,10 @@ jobs:
       - uses: CodeBoarding/CodeBoarding-action@v1
         with:
           codeboarding_analysis_location: in_place
+          # Your CodeBoarding plan, on CodeBoarding's hosted tier. The run fails with
+          # a message naming this secret if CODEBOARDING_LICENSE is not set.
           llm: license
-          license_key: ${{ secrets.CODEBOARDING_LICENSE_KEY }}
+          license_key: ${{ secrets.CODEBOARDING_LICENSE }}
 
   sync:
     if: github.event_name == 'push'
@@ -64,5 +66,7 @@ jobs:
         with:
           mode: sync
           codeboarding_analysis_location: in_place
+          # Your CodeBoarding plan, on CodeBoarding's hosted tier. The run fails with
+          # a message naming this secret if CODEBOARDING_LICENSE is not set.
           llm: license
-          license_key: ${{ secrets.CODEBOARDING_LICENSE_KEY }}
+          license_key: ${{ secrets.CODEBOARDING_LICENSE }}
